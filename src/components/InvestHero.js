@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const InvestHero = () => {
+const InvestHero = ({budget, resetBudget}) => {
     const navigate = useNavigate();
 
     const navigateTo = (path) => {
@@ -15,24 +15,24 @@ const InvestHero = () => {
                 
                 <h2 className='text-white text-3xl'> {/* {budget-amount >= $1000 ? <h2> Youre remaining budget this month, after covering necessities, is ...</h2> : <h2> Looks like you still have ... to invest </h2> } */} Your remaining budget this month, after covering necessities, is...</h2>
                 <div className="p-4 m-4 max-w-sm mx-auto bg-white rounded-lg border border-white-200 shadow-md dark:bg-gray-800 dark:border-white-700">
-                    <p className='budget-amount text-white text-7xl'>$1000</p>
+                    <p className='budget-amount text-white text-7xl'>${budget}</p>
                 </div>
                 
                 <div className='flex flex-wrap justify-center gap-4 mt-4 py-5 '>
                     <div>
-                        <button className='m-5' onClick={() => navigateTo('/investments/going-out')}>Going Out</button>
-                        <button className='m-5' onClick={() => navigateTo('/invest-etfs')}>Investing in ETFs</button>
-                        <button className='m-5' onClick={() => navigateTo('/invest-stocks')}>Investing in Stocks</button>
+                        <button className='m-5' onClick={() => navigateTo('/investments/going-out')}>Green Energy</button>
+                        <button className='m-5' onClick={() => navigateTo('/investments/etfs')}>Investing in ETFs</button>
+                        <button className='m-5' onClick={() => navigateTo('/investments/stocks')}>Investing in Stocks</button>
                     </div>
                     <div>
-                        <button className='m-5' onClick={() => navigateTo('/savings-account')}>High-Yield Savings Account</button>
-                        <button className='m-5' onClick={() => navigateTo('/invest-crypto')}>Investing in Crypto/NFTs</button>
-                        <button className='m-5' onClick={() => navigateTo('/invest-bonds')}>Investing in Bonds</button>
+                        <button className='m-5' onClick={() => navigateTo('/investments/highyield')}>High-Yield Savings Account</button>
+                        <button className='m-5' onClick={() => navigateTo('/investments/crypto')}>Investing in Crypto/NFTs</button>
+                        <button className='m-5' onClick={() => navigateTo('/investments/bonds')}>Investing in Bonds</button>
                     </div>
                 </div>
                 <div>
-                    <button className='reset-budget center m-5 px-8 py-8 bg-gradient-to-r from-[orange] to-[red]' onClick={() => navigateTo('/')}>Reset Budget</button>
-                    <button className='reset-budget center m-5 px-8 py-8 bg-gradient-to-r from-[yellow] to-[orange]' onClick={() => navigateTo('/investments/conclusion')}>Conclusion</button>
+                    <button className='reset-budget center m-5 px-8 py-8 bg-gradient-to-r from-[orange] to-[red]' onClick={resetBudget}>Reset Budget</button>
+                    <button className='reset-budget center m-5 px-8 py-8 bg-gradient-to-r from-[purple] to-[blue]' onClick={() => navigateTo('/investments/conclusion')}>My Investments</button>
                 </div>
                 
             </div>
