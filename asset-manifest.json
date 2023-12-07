@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/nola-invests-hci-project/static/css/main.cf7619e8.css",
+    "main.js": "/nola-invests-hci-project/static/js/main.254ad518.js",
+    "static/media/logo.svg": "/nola-invests-hci-project/static/media/logo.e522a562aec5ec609c179e6f50ac0f7f.svg",
+    "index.html": "/nola-invests-hci-project/index.html",
+    "main.cf7619e8.css.map": "/nola-invests-hci-project/static/css/main.cf7619e8.css.map",
+    "main.254ad518.js.map": "/nola-invests-hci-project/static/js/main.254ad518.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cf7619e8.css",
+    "static/js/main.254ad518.js"
+  ]
+}
